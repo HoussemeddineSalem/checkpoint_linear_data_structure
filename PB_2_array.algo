@@ -1,0 +1,45 @@
+ALGORITHM Problem2_with_array
+VAR
+i,j,sumSet1,sumSet2,totalSum : INTEGER := 0;
+count1 : INTEGER := 0;
+count2 : INTEGER :=0; 
+CONST
+set1 : ARRAY_OF INTEGER[4];
+set2 : ARRAY_OF INTEGER[5];
+BEGIN
+    //for each element in set1, looking up if it exist in set2
+    FOR i FROM 1 TO set1.length STEP 1  DO
+        FOR j FROM 1 TO max step2.length STEP 1 DO
+          IF (set1[i] <> set2 [j]) THEN
+              count1 := count1 +1;
+          END_IF
+        END_FOR
+                IF (count1 < set2.length) THEN    
+                   sumSet1 := sumSet1 + set1[i];
+                END_IF
+    END_FOR
+ 
+    //for each element in set2, looking up if it exist in set1
+    FOR i FROM 1 TO set2.length STEP 1  DO
+        FOR j FROM 1 TO max step1.length STEP 1 DO
+              IF (set2[i] <> set1 [j]) THEN
+                count2 := count2 +1;
+              END_IF
+        END_FOR
+                IF (count2 < set2.length) THEN
+                   sumSet2 := sumSet2 + set2[i];
+                END_IF
+    END_FOR            
+    
+    totalSum := sumSet1 + sumSet2;
+    Write ("sum of all distinct elements from the set is", totalSum)
+
+
+
+END
+
+//Role of count1 & count 2; each time we are comparing set1[i] with Set2[j],Set2[j+1],...
+//the counter " count" increase by 1 each time the value of Set2 does not math the value of Set1
+//when the value of Set1[i] do matches any value from Set2, count < set2.length
+
+//PB_2_array.js is a javascript traduction for this algorithm....:-)
