@@ -12,7 +12,7 @@ set2 : ARRAY_OF INTEGER[];
 BEGIN
     //for each element in set1, looking up if it exist in set2
     FOR i FROM 1 TO set1.length STEP 1  DO
-        FOR j FROM 1 TO max step2.length STEP 1 DO
+        FOR j FROM 1 TO step2.length STEP 1 DO
           IF (set1[i] <> set2 [j]) THEN
               count1 := count1 +1;
           END_IF
@@ -24,7 +24,7 @@ BEGIN
  
     //for each element in set2, looking up if it exist in set1
     FOR i FROM 1 TO set2.length STEP 1  DO
-        FOR j FROM 1 TO max step1.length STEP 1 DO
+        FOR j FROM 1 TO step1.length STEP 1 DO
               IF (set2[i] <> set1 [j]) THEN
                 count2 := count2 +1;
               END_IF
