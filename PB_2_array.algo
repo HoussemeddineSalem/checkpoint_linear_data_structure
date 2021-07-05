@@ -1,11 +1,14 @@
 ALGORITHM Problem2_with_array
 VAR
-i,j,sumSet1,sumSet2,totalSum : INTEGER := 0;
+i,j: INTEGER;
+sumSet1 : INTEGER :=0;
+sumSet2 : INTEGER :=0;
+totalSum : INTEGER :=0;
 count1 : INTEGER := 0;
 count2 : INTEGER :=0; 
 CONST
-set1 : ARRAY_OF INTEGER[4];
-set2 : ARRAY_OF INTEGER[5];
+set1 : ARRAY_OF INTEGER[];
+set2 : ARRAY_OF INTEGER[];
 BEGIN
     //for each element in set1, looking up if it exist in set2
     FOR i FROM 1 TO set1.length STEP 1  DO
